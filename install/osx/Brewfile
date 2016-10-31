@@ -14,6 +14,10 @@ brew 'zsh-syntax-highlighting'
 brew 'awscli'
 brew 'watch'
 brew 'reattach-to-user-namespace'
+brew 'coreutils'
+brew 'htop-osx'
+brew 'neovim/neovim/neovim'
+
 
 # Casks
 cask_args appdir: '/Applications'
@@ -29,19 +33,34 @@ cask 'iterm2'
 cask 'virtualbox'
 cask 'atom'
 cask 'spotify'
-cask 'java' unless system '/usr/libexec/java_home --failfast'
-cask 'spectacle'
 cask 'flux'
 cask 'alfred'
-cask 'keepingyouawake'
+cask 'hammerspoon'
+cask 'caskroom/versions/firefoxdeveloperedition'
+cask 'ccmenu'
+cask 'electron'
+cask 'firefox'
+cask 'graphviz'
+cask 'istat-menus'
+cask 'iterm2'
+cask 'karabiner'
+cask 'osxfuse'
+cask 'python3'
+cask 'screenflow'
+cask 'seil'
+cask 'skype'
+cask 'vlc'
+
 
 # App Store Apps
 brew 'mas'
-mas 'lastpass', id: 926036361
-mas 'Evernote', id: 406056744
-mas 'iA Writer', id: 775737590
-mas '1Password', id: 443987910
+mas 'OmniGraffle', id: 1142578753
+mas 'Textual', id: 896450579
+mas 'Airmail 3', id: 918858936
 mas 'Xcode', id: 497799835
-mas 'Wunderlist', id: 410628904
+mas 'Pocket', id: 568494494
+mas 'iA Writer', id: 775737590
 mas 'Slack', id: 803453959
-mas 'Dash', id: 449589707
+mas 'Fantastical 2', id: 975937182
+mas 'LastPass', id: 926036361
+mas 'Tweetbot', id: 557168941
