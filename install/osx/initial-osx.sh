@@ -33,7 +33,7 @@ echo -e "\nInstalling homebrew bundle"
 brew install bundle
 
 # Go to location of Brewfile and run brew bundle
-cd ~/src/lucamaraschi/dotfiles/install/osx
+cd ~/src/lm/dotfiles/install/osx
 brew bundle
 
 # Cd back to previous directory
