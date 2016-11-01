@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-DIR=~/dotfiles                            # dotfiles directory
+DIR=~/src/lm/dotfiles                            # dotfiles directory
 OLDDIR=~/dotfiles_backup                  # old dotfiles backup directory
 FILES="vimrc vim zshrc tmux.conf aliases" # list of files/folders to symlink in homedir
 

@@ -30,7 +30,7 @@ fi
 echo -e "\nInstalling homebrew bundle"
 
 # Install bundle https://github.com/Homebrew/homebrew-bundle
-brew install bundle
+brew tap Homebrew/bundle
 
 # Go to location of Brewfile and run brew bundle
 cd ~/src/lm/dotfiles/install/osx
