@@ -18,6 +18,7 @@ else
 fi
 
 echo "Cloning Dracula iTerm theme"
+rm -rf ~/iterm/themes
 git clone https://github.com/dracula/iterm.git ~/iterm/themes
 echo -e "\nDracula theme cloned, import the theme in iTerm\n"
 
@@ -32,7 +33,7 @@ echo -e "\nInstalling homebrew bundle"
 brew install bundle
 
 # Go to location of Brewfile and run brew bundle
-cd ~/dotfiles/install/osx
+cd ~/src/lucamaraschi/dotfiles/install/osx
 brew bundle
 
 # Cd back to previous directory
