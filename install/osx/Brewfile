@@ -17,7 +17,6 @@ brew 'watch'
 brew 'reattach-to-user-namespace'
 brew 'coreutils'
 brew 'htop-osx'
-brew 'neovim/neovim/neovim'
 
 
 # Casks
@@ -50,6 +49,7 @@ cask 'screenflow'
 cask 'seil'
 cask 'skype'
 cask 'vlc'
+cask 'microsoft-office'
 
 
 # App Store Apps

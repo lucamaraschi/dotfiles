@@ -1,3 +1,4 @@
 .gitmodules
 .secrets
 vim/plugged
+.netrwhist

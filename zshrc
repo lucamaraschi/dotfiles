@@ -22,7 +22,7 @@ if [ -f ~/.secrets ]; then
 fi
 
 # PATH
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+export PATH="$PATH:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 
 # Add users bin folder to path
 if [ -e ~/bin ]; then

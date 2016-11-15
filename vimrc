@@ -10,8 +10,6 @@ Plug 'pangloss/vim-javascript'
 Plug 'easymotion/vim-easymotion'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'jeffkreeftmeijer/vim-numbertoggle'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'sheerun/vim-polyglot'
 Plug 'dracula/vim'
@@ -21,7 +19,7 @@ Plug 'Raimondi/delimitMate'
 Plug 'SirVer/ultisnips'
 Plug 'Valloric/YouCompleteMe'
 Plug 'airblade/vim-gitgutter'
-Plug 'bling/vim-airline'
+Plug 'vim-airline/vim-airline'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'epmatsw/ag.vim'
 Plug 'ervandew/supertab'
@@ -49,7 +47,7 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'vim-scripts/BufOnly.vim'
-Plug 'wakatime/vim-wakatime'
+Plug 'itchyny/lightline.vim'
 
 call plug#end()
 
@@ -59,7 +57,6 @@ call plug#end()
 syntax on
 syntax enable
 color dracula
-let g:airline_theme='murmur' " vim-airline theme
 
 
 " Search Settings
@@ -107,7 +104,7 @@ set tabstop=4
 set shiftwidth=4
 set encoding=utf-8
 set smarttab
-set nonumber
+set number
 set expandtab
 set history=1000
 set autoread
@@ -126,23 +123,27 @@ map  <left>  <nop>
 map  <right> <nop>
 map  <up>    <nop>
 
+" Lightline
+" =========
+
+
 
 " Airline
 " =======
-let g:airline_powerline_fonts = 0
-let g:airline_theme = 'eighties'
-if !exists('g:airline_symbols')
-  let g:airline_symbols = {}
-endif
-let g:airline_section_b = ''
-let g:airline_section_z = airline#section#create(['%l:%c:%L'])
-let g:airline_left_sep = ''
-let g:airline_right_sep = ''
-let g:airline_symbols.branch = '⎇'
-let g:airline_symbols.paste = 'ρ'
-let g:airline_symbols.whitespace = 'Ξ'
-let g:airline#extensions#hunks#enabled = 0
-let g:airline#extensions#hunks#enabled = 0
+" let g:airline_powerline_fonts = 0
+" let g:airline_theme = 'base16_eighties'
+" if !exists('g:airline_symbols')
+"   let g:airline_symbols = {}
+" endif
+" let g:airline_section_b = ''
+" let g:airline_section_z = airline#section#create(['%l:%c:%L'])
+" let g:airline_left_sep = ''
+" let g:airline_right_sep = ''
+" let g:airline_symbols.branch = '⎇'
+" let g:airline_symbols.paste = 'ρ'
+" let g:airline_symbols.whitespace = 'Ξ'
+" let g:airline#extensions#hunks#enabled = 0
+" let g:airline#extensions#hunks#enabled = 0
 
 
 " Git Gutter
