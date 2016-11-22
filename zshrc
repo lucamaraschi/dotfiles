@@ -1,36 +1,87 @@
-# Path to ZSH
-export ZSH=$HOME/.oh-my-zsh
+###########################
+#  Configuration
+###########################
+username="lm"
+# if this ever breaks run "$ brew prefix <toolname>"
+export PATH="$PATH:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:/Users/$username/.config/base16-shell"
+export PATH="$PATH:/Users/$USER/src/$username/dotfiles/bin"
+export PATH="$PATH:/Users/$USER/.config/base16-shell"
+export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+export PATH="/usr/local/opt/curl/bin:$PATH"
 
-# ZSH Theme
-ZSH_THEME="Soliah"
+# man pages
+export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
+export MANPATH="/usr/local/opt/gnu-tar/libexec/gnuman:$MANPATH"
 
-# ZSH Config
-plugins=(docker git git-extras history history-substring nvm)
-source $ZSH/oh-my-zsh.sh
+# start zle
+zmodload zsh/zle
 
-# Make VIM Default editor
-export EDITOR=vim
+# utf-8 & screen
+export LC_ALL="en_US.UTF-8"
+export TERM=screen-256color
 
-#Load aliases from file
-if [ -f ~/.aliases ]; then
-	source $HOME/.aliases
+# shortcut to this dotfiles path is $ZSH
+export ZSH=$HOME/src/$username/dotfiles/zsh
+export DOTFILES=$HOME/src/$username/dotfiles
+export TEMPLATES=$HOME/src/$username/templates
+
+# your project folder that we can `c [tab]` to
+export PROJECTS=~/src
+
+# source every .zsh file in this rep
+for config_file ($ZSH/**/*.zsh) source $config_file
+for zsh_file (~/.zsh/bundle/*.zsh) source $zsh_file
+
+###########################
+# Colors
+###########################
+# base-16
+BASE16_SHELL="$HOME/.config/base16-shell/scripts/base16-eighties.sh"
+if [ -s $BASE16_SHELL ]; then
+  source $BASE16_SHELL
 fi
 
-# Load secret env vars
-if [ -f ~/.secrets ]; then
-	source $HOME/.secrets
+###########################
+#  Plugins
+###########################
+antigen bundle marzocchi/zsh-notify
+antigen bundle zsh-users/fizsh
+antigen bundle zsh-users/zsh-completions
+antigen bundle zsh-users/zsh-history-substring-search
+antigen bundle zsh-users/zsh-syntax-highlighting
+
+antigen bundle lukechilds/zsh-nvm
+
+# load autosuggest as last
+antigen bundle tarruda/zsh-autosuggestions
+
+# initialize autocomplete here, otherwise functions won't be loaded
+autoload -U compinit
+compinit
+for f in $ZSH/../**/completion.sh; do
+  source "$f"
+done
+
+# Fix history search in tmux
+bindkey '^R' history-incremental-search-backward
+
+###############################################################################
+# Default programs
+###############################################################################
+if [ -x "$(command -v nvim)" ]; then
+  export EDITOR="nvim"
+else
+  export EDITOR="vim"
 fi
 
-# PATH
-export PATH="$PATH:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+# default programs
+export GHI_PAGER=less
 
-# Add users bin folder to path
-if [ -e ~/bin ]; then
-	export PATH="$PATH:~/bin"
+# load nvm
+export NVM_DIR="~/.nvm"
+if [ -s "$NVM_DIR/nvm.sh" ]; then
+  . "$NVM_DIR/nvm.sh"
 fi
-
-# NVM
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 
 # RVM
 source ~/.rvm/scripts/rvm

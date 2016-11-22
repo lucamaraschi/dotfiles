@@ -3,7 +3,7 @@
 echo -e "\n\nInstalling Node (from nvm)"
 
 # reload nvm into this environment
-source $(brew --prefix nvm)/nvm.sh
 
-nvm install stable
-nvm alias default stable
+nvm install node
+nvm use node
+nvm alias default node
