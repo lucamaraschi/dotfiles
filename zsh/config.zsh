@@ -21,7 +21,7 @@ setopt PROMPT_SUBST
 setopt CORRECT
 setopt COMPLETE_IN_WORD
 setopt IGNORE_EOF
-setop AUTO_CD
+setopt AUTO_CD
 
 setopt APPEND_HISTORY # adds history
 setopt INC_APPEND_HISTORY SHARE_HISTORY  # adds history incrementally and share it across sessions

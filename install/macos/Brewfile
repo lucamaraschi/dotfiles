@@ -17,6 +17,8 @@ brew 'watch'
 brew 'reattach-to-user-namespace'
 brew 'coreutils'
 brew 'htop-osx'
+brew 'cmake'
+brew 'ccache'
 
 
 # Casks
@@ -50,6 +52,7 @@ cask 'seil'
 cask 'skype'
 cask 'vlc'
 cask 'microsoft-office'
+cask 'bartender'
 
 
 # App Store Apps

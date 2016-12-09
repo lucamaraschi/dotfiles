@@ -3,7 +3,7 @@
 ###########################
 username="lm"
 # if this ever breaks run "$ brew prefix <toolname>"
-export PATH="$PATH:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:/Users/$username/.config/base16-shell"
+export PATH="$PATH:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:/Users/$USER/.config/base16-shell"
 export PATH="$PATH:/Users/$USER/src/$username/dotfiles/bin"
 export PATH="$PATH:/Users/$USER/.config/base16-shell"
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
@@ -78,7 +78,7 @@ fi
 export GHI_PAGER=less
 
 # load nvm
-export NVM_DIR="~/.nvm"
+export NVM_DIR="$HOME/.nvm"
 if [ -s "$NVM_DIR/nvm.sh" ]; then
   . "$NVM_DIR/nvm.sh"
 fi
