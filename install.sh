@@ -21,10 +21,23 @@ fi
 
 if [ "$(uname)" == "Darwin" ]; then
 	## Running on OSX"
+	echo 'Linking dotfiles...'
 	source install/osx/initial-osx.sh
+
+	echo 'Configuring the system...'
 	source install/osx/configuration.sh
+
+	echo 'Setiing system preferences...'
+	source install/osx/preferences.sh
+
+	echo 'NVM time...'
 	source install/osx/nvm.sh
+
+	echo 'RVM time...'
 	source install/osx/rvm.sh
+
+	echo 'Configuring VIM...'
+	source install/osx/vim.sh
 fi;
 
 clear
