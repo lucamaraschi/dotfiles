@@ -11,33 +11,25 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 source install/link-dotfiles.sh
 
-dist=`grep DISTRIB_ID /etc/*-release | awk -F '=' '{print $2}'`
-
-if [ "$dist" == "Ubuntu" ]; then
-	# Running on ubuntu
-	source install/ubuntu/initial-ubuntu.sh
-    source install/ubuntu/install-fonts-ubuntu.sh
-fi
-
 if [ "$(uname)" == "Darwin" ]; then
 	## Running on OSX"
 	echo 'Linking dotfiles...'
-	source install/osx/initial-osx.sh
+	source install/macos/initial-osx.sh
 
 	echo 'Configuring the system...'
-	source install/osx/configuration.sh
+	source install/macos/configuration.sh
 
 	echo 'Setiing system preferences...'
-	source install/osx/preferences.sh
+	source install/macos/preferences.sh
 
 	echo 'NVM time...'
-	source install/osx/nvm.sh
+	source install/macos/nvm.sh
 
 	echo 'RVM time...'
-	source install/osx/rvm.sh
+	source install/macos/rvm.sh
 
 	echo 'Configuring VIM...'
-	source install/osx/vim.sh
+	source install/macos/vim.sh
 fi;
 
 clear

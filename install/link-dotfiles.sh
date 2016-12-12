@@ -13,7 +13,6 @@ for file in $FILES; do
 done
 echo 'Dotfiles linked.'
 sleep 1
-clear
 cd $DIR
 
 # ln -s ~/.vim ~/.config/nvim
