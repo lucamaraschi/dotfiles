@@ -1,4 +1,5 @@
 # # Packages
+brew 'python3'
 brew 'ack'
 brew 'tree'
 brew 'wget'
@@ -46,7 +47,6 @@ cask 'istat-menus'
 cask 'iterm2'
 cask 'karabiner'
 cask 'osxfuse'
-cask 'python3'
 cask 'screenflow'
 cask 'seil'
 cask 'skype'

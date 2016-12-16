@@ -19,7 +19,7 @@ if [ "$(uname)" == "Darwin" ]; then
 	echo 'Configuring the system...'
 	source install/macos/configuration.sh
 
-	echo 'Setiing system preferences...'
+	echo 'Setting system preferences...'
 	source install/macos/preferences.sh
 
 	echo 'NVM time...'
