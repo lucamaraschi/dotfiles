@@ -53,6 +53,7 @@ cask 'skype'
 cask 'vlc'
 cask 'microsoft-office'
 cask 'bartender'
+cask 'mysqlworkbench'
 
 
 # App Store Apps
