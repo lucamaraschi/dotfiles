@@ -37,4 +37,4 @@ cd ~/src/lm/dotfiles/install/macos
 brew bundle
 
 # Cd back to previous directory
-cd -
+cd ~/src/lm/dotfiles/

@@ -2,14 +2,17 @@
 
 DIR=~/src/lm/dotfiles                            # dotfiles directory
 OLDDIR=~/dotfiles_backup                  # old dotfiles backup directory
-FILES="vimrc zshrc tmux.conf aliases" # list of files/folders to symlink in homedir
+FILES="vim zsh vimrc zshrc tmux.conf gitconfig aliases" # list of files/folders to symlink in homedir
 
 mkdir -p $OLDDIR
 cd $DIR
 
 for file in $FILES; do
-	mv ~/.$file $OLDDIR
-	ln -s $DIR/$file ~/.$file
+	if [ ! -L ~/.$file ]; then
+		mv ~/.$file $OLDDIR
+		echo 'Linking "~/.$file" with "$DIR/$file"'
+		ln -s $DIR/$file ~/.$file
+	fi
 done
 echo 'Dotfiles linked.'
 sleep 1
