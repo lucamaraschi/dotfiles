@@ -4,3 +4,6 @@ vim/plugged
 .netrwhist
 /Users/paomaras
 /Users/paomaras
+bundle
+vim/bundle
+zsh/bundle

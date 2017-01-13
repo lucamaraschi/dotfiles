@@ -28,6 +28,9 @@ if [ "$(uname)" == "Darwin" ]; then
 	echo 'RVM time...'
 	source install/macos/rvm.sh
 
+	echo 'ZSH time...'
+	source install/macos/zsh.sh
+
 	echo 'Configuring VIM...'
 	source install/macos/vim.sh
 fi;
