@@ -18,6 +18,12 @@ alias ...='cd ../..'
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
 
+alias la='ls -al'
+
+# disable tty when in vim
+alias vim="stty stop '' -ixoff ; vim"
+
+
 # Git aliases
 alias gs='git status '
 alias ga='git add '

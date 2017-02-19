@@ -32,6 +32,9 @@ export PROJECTS=~/src
 for config_file ($ZSH/**/*.zsh) source $config_file
 for zsh_file (~/.zsh/bundle/*.zsh) source $zsh_file
 
+# source the alias file
+source ~/.aliases
+
 ###########################
 # Colors
 ###########################
@@ -91,3 +94,4 @@ export PATH="$PATH:$HOME/.rvm/bin"
 if [ -f ~/.ssh/id_rsa ]; then
 	ssh-add ~/.ssh/id_rsa
 fi
+clear
