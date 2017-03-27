@@ -54,6 +54,7 @@ cask 'vlc'
 cask 'microsoft-office'
 cask 'bartender'
 cask 'mysqlworkbench'
+cask 'karabiner-elements'
 
 
 # App Store Apps
