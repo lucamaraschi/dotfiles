@@ -20,6 +20,8 @@ brew 'coreutils'
 brew 'htop-osx'
 brew 'cmake'
 brew 'ccache'
+brew 'android-sdk'
+brew 'android-ndk'
 
 
 # Casks
@@ -44,7 +46,6 @@ cask 'electron'
 cask 'firefox'
 cask 'istat-menus'
 cask 'iterm2'
-cask 'karabiner'
 cask 'osxfuse'
 cask 'skype'
 cask 'vlc'
@@ -53,6 +54,10 @@ cask 'bartender'
 cask 'mysqlworkbench'
 cask 'karabiner-elements'
 cask 'visual-studio-code'
+cask 'adobe-creative-cloud'
+cask 'skyfonts'
+cask 'telegram'
+cask 'android-studio'
 
 
 # App Store Apps

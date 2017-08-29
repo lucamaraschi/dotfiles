@@ -82,9 +82,7 @@ export GHI_PAGER=less
 
 # load nvm
 export NVM_DIR="$HOME/.nvm"
-if [ -s "$NVM_DIR/nvm.sh" ]; then
-  . "$NVM_DIR/nvm.sh"
-fi
+source $(brew --prefix nvm)/nvm.sh
 
 # RVM
 source ~/.rvm/scripts/rvm
