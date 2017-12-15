@@ -58,7 +58,10 @@ cask 'adobe-creative-cloud'
 cask 'skyfonts'
 cask 'telegram'
 cask 'android-studio'
+cask 'docker'
 
+# Fonts
+cask 'font-sourcecodepro-nerd-font'
 
 # App Store Apps
 brew 'mas'
