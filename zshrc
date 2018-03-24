@@ -1,6 +1,8 @@
 ###########################
 #  Configuration
 ###########################
+if [ "$TMUX" = "" ]; then tmux; fi
+
 username="lm"
 # if this ever breaks run "$ brew prefix <toolname>"
 export PATH="$PATH:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:/Users/$USER/.config/base16-shell"
@@ -93,3 +95,8 @@ if [ -f ~/.ssh/id_rsa ]; then
 	ssh-add ~/.ssh/id_rsa
 fi
 clear
+
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+export PATH="$HOME/.fastlane/bin:$PATH"

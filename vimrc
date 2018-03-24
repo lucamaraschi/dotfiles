@@ -76,6 +76,15 @@ match ErrorMsg '^\(<\|=\|>\)\{7\}\([^=].\+\)\?$'
 
 set guioptions-=m  "remove toolbar
 
+" Standard JS
+let g:syntastic_javascript_checkers = ['standard']
+let g:syntastic_mode_map = { 'passive_filetypes': ['html'] }
+
+" ctrl-s to save
+noremap <C-S> :update<CR>
+vnoremap <C-S> <C-C>:update<CR>
+inoremap <C-S> <C-O>:update<CR>
+
 " Keybinds
 let mapleader=","
 let g:NumberToggleTrigger="<C-n>"
