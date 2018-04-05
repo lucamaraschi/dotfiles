@@ -14,6 +14,7 @@ if [ $? -ne 0 ]; then
     tr -d '\n')
   softwareupdate -i "$PROD" -v;
 else
+  sudo xcodebuild -license accept
   echo "Xcode CLI tools OK"
 fi
 
