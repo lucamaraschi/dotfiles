@@ -1,4 +1,6 @@
 #!/bin/sh
 
-cd ~/.vim/bundle/YouCompleteMe
+vim +'PlugInstall --sync' +qa
+
+cd ~/.vim/plugged/YouCompleteMe
 ./install.py --clang-completer
