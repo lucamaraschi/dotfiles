@@ -16,9 +16,6 @@ if [ "$(uname)" == "Darwin" ]; then
 	echo 'Linking dotfiles...'
 	source install/macos/initial-osx.sh
 
-	echo 'Setting system preferences...'
-	source install/macos/preferences.sh
-
 	echo 'NVM time...'
 	source install/macos/nvm.sh
 
@@ -30,6 +27,9 @@ if [ "$(uname)" == "Darwin" ]; then
 
 	echo 'Configuring VIM...'
 	source install/macos/vim.sh
+
+	echo 'Setting system preferences...'
+	source install/macos/preferences.sh
 fi;
 
 clear

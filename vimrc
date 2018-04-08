@@ -21,7 +21,7 @@ Plug 'tpope/vim-fugitive'
 call plug#end()
 
 syntax on
-color dracula
+"color dracula
 
 let g:lightline = {
 \  'colorscheme': 'Dracula',
