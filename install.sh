@@ -16,9 +16,6 @@ if [ "$(uname)" == "Darwin" ]; then
 	echo 'Linking dotfiles...'
 	source install/macos/initial-osx.sh
 
-	echo 'Configuring the system...'
-	source install/macos/configuration.sh
-
 	echo 'Setting system preferences...'
 	source install/macos/preferences.sh
 
