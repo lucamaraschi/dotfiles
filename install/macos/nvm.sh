@@ -2,12 +2,11 @@
 
 echo -e "\n\nInstalling Node (from nvm)"
 
-# reload nvm into this environment
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
-curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh | bash
-
-"$HOME/.nvm/nvm.sh" install node
-"$HOME/.nvm/nvm.sh" use node
-"$HOME/.nvm/nvm.sh" alias default node
+nvm install node
+nvm use node
+nvm alias default node
 
 cd ~
