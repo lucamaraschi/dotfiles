@@ -1,4 +1,7 @@
 #!/bin/sh
+
+echo '========>ZSH INSTALLING...'
+
 mkdir -p ~/.zsh/bundle
 curl -L https://raw.githubusercontent.com/zsh-users/antigen/master/bin/antigen.zsh \
   >  ~/.zsh/bundle/antigen.zsh
