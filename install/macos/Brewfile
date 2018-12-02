@@ -41,7 +41,6 @@ cask 'iterm2'
 cask 'vlc'
 cask 'microsoft-office'
 cask 'bartender'
-cask 'mysqlworkbench'
 cask 'karabiner-elements'
 cask 'visual-studio-code'
 cask 'skyfonts'
@@ -57,12 +56,8 @@ cask 'font-sourcecodepro-nerd-font'
 # App Store Apps
 brew 'mas'
 mas 'OmniGraffle', id: 1142578753
-mas 'Textual', id: 896450579
-mas 'Airmail 3', id: 918858936
 mas 'Xcode', id: 497799835
-mas 'Pocket', id: 568494494
 mas 'iA Writer', id: 775737590
 mas 'Slack', id: 803453959
 mas 'Fantastical 2', id: 975937182
-mas 'LastPass', id: 926036361
-mas 'Tweetbot', id: 557168941
+mas '1Password', id: 1333542190
