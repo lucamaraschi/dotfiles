@@ -1,10 +1,7 @@
-#!/bin/sh
+echo -e "\n\nInstalling nodejs (from nvm)"
 
-echo -e "\n\nInstalling Node (from nvm)"
+# reload nvm into this environment
+source $(brew --prefix nvm)/nvm.sh
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
-
-nvm install node
-nvm use node
-nvm alias default node
+nvm install stable
+nvm alias default stable

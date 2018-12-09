@@ -16,21 +16,28 @@ if [ "$(uname)" == "Darwin" ]; then
 	echo 'Linking dotfiles...'
 	source install/macos/initial-osx.sh
 
+	echo 'Setting system preferences...'
+	source install/macos/preferences.sh
+
 	echo 'NVM time...'
 	source install/macos/nvm.sh
 
-	echo 'RVM time...'
-	source install/macos/rvm.sh
-
-	echo 'ZSH time...'
-	source install/macos/zsh.sh
-
 	echo 'Configuring VIM...'
 	source install/macos/vim.sh
-
-	echo 'Setting system preferences...'
-	source install/macos/preferences.sh
 fi;
+
+clear
+echo "Installing tpm, tmux plugin manager"
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
+clear 
+echo "Installing ZSH theme"
+souce install/bullet-train-zsh-theme.sh
+
+clear 
+echo "Installing Spaceship prompt"
+souce install/spaceship-prompt.sh
+
 
 clear
 echo "Configuring zsh as default shell"

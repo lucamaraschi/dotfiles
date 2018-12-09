@@ -18,83 +18,54 @@ export MANPATH="/usr/local/opt/gnu-tar/libexec/gnuman:$MANPATH"
 # start zle
 zmodload zsh/zle
 
-# utf-8 & screen
-export LC_ALL="en_US.UTF-8"
-export TERM=screen-256color
+# Path to ZSH
+export ZSH=$HOME/.oh-my-zsh
 
-# shortcut to this dotfiles path is $ZSH
-export ZSH=$HOME/src/$username/dotfiles/zsh
-export DOTFILES=$HOME/src/$username/dotfiles
-export TEMPLATES=$HOME/src/$username/templates
+# ZSH Theme
+ZSH_THEME="bullet-train"
 
-# your project folder that we can `c [tab]` to
-export PROJECTS=~/src
+# ZSH Config
+plugins=(git git-extras)
+source $ZSH/oh-my-zsh.sh
 
-# source every .zsh file in this rep
-for config_file ($ZSH/**/*.zsh) source $config_file
-for zsh_file (~/.zsh/bundle/*.zsh) source $zsh_file
+# Make VIM Default editor
+export EDITOR=vim
 
-# source the alias file
-source ~/.aliases
-
-###########################
-# Colors
-###########################
-# base-16
-BASE16_SHELL="$HOME/.config/base16-shell/scripts/base16-eighties.sh"
-if [ -s $BASE16_SHELL ]; then
-  source $BASE16_SHELL
+#Load aliases from file
+if [ -f ~/.aliases ]; then
+	source $HOME/.aliases
 fi
 
-###########################
-#  Plugins
-###########################
-antigen bundle marzocchi/zsh-notify
-antigen bundle zsh-users/fizsh
-antigen bundle zsh-users/zsh-completions
-antigen bundle zsh-users/zsh-history-substring-search
-antigen bundle zsh-users/zsh-syntax-highlighting
-
-# antigen bundle lukechilds/zsh-nvm
-
-# load autosuggest as last
-antigen bundle tarruda/zsh-autosuggestions
-
-# initialize autocomplete here, otherwise functions won't be loaded
-autoload -U compinit
-compinit
-for f in $ZSH/../**/completion.sh; do
-  source "$f"
-done
-
-# Fix history search in tmux
-bindkey '^R' history-incremental-search-backward
-
-###############################################################################
-# Default programs
-###############################################################################
-if [ -x "$(command -v nvim)" ]; then
-  export EDITOR="nvim"
-else
-  export EDITOR="vim"
+# Load secret env vars
+if [ -f ~/dotfiles/.secrets ]; then
+	source $HOME/dotfiles/.secrets
 fi
 
-# default programs
-export GHI_PAGER=less
+# PATH
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/home/lm/apps:/home/lm/bin"
 
-# load nvm
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+# NVM
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 
 # RVM
-source ~/.rvm/scripts/rvm
-export PATH="$PATH:$HOME/.rvm/bin"
+# source ~/.rvm/scripts/rvm
+# export PATH="$PATH:$HOME/.rvm/bin"
 
 # ssh
 if [ -f ~/.ssh/id_rsa ]; then
 	ssh-add ~/.ssh/id_rsa
 fi
-clear
+
+# export GOPATH=$HOME/.go
+# export PATH="$PATH:$GOPATH"
+# export PATH=$PATH:/usr/local/opt/go/libexec/bin
+
+# export ANDROID_HOME=$HOME/Android/Sdk
+# export PATH=$PATH:$ANDROID_HOME/tools
+# export PATH=$PATH:$ANDROID_HOME/platform-tools
+
+# added by travis gem
+# [ -f /home/lm/.travis/travis.sh ] && source /home/lm/.travis/travis.sh
 
 export ANDROID_HOME=$HOME/Library/Android/sdk
 export PATH=$PATH:$ANDROID_HOME/tools

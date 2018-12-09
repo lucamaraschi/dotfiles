@@ -13,7 +13,8 @@ Plug 'easymotion/vim-easymotion'
 Plug 'tpope/vim-commentary'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'jeffkreeftmeijer/vim-numbertoggle'
-Plug 'itchyny/lightline.vim'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'sheerun/vim-polyglot'
 Plug 'dracula/vim'
@@ -21,38 +22,8 @@ Plug 'tpope/vim-fugitive'
 call plug#end()
 
 syntax on
-"color dracula
-
-let g:lightline = {
-\  'colorscheme': 'Dracula',
-\  'active': {
-\    'left':[ [ 'mode', 'paste' ],
-\             [ 'gitbranch', 'readonly', 'filename', 'modified' ]
-\    ]
-\  },
-\   'component': {
-\     'lineinfo': ' %3l:%-2v',
-\   },
-\  'component_function': {
-\    'gitbranch': 'fugitive#head',
-\  }
-\}
-
-let g:lightline.separator = {
-	\   'left': '', 'right': ''
-  \}
-let g:lightline.subseparator = {
-	\   'left': '', 'right': '' 
-  \}
-let g:lightline.tabline = {
-  \   'left': [ ['tabs'] ],
-  \   'right': [ ['close'] ]
-  \ }
-set showtabline=2  " Show tabline
-set guioptions-=e  " Don't use GUI tabline
-
-let g:lightline_powerline_fonts = 1
-let g:lightline#extensions#tabline#enabled = 0
+color dracula
+let g:airline_theme='murmur' " vim-airline theme
 
 set guifont=Monaco\ 14
 set laststatus=2
@@ -67,23 +38,11 @@ set hlsearch
 set history=1000
 set nobackup
 set noswapfile
-set noshowmode
 
 " make backspace behave in a sane manner
 set backspace=indent,eol,start
 " highlight conflicts
 match ErrorMsg '^\(<\|=\|>\)\{7\}\([^=].\+\)\?$'
-
-set guioptions-=m  "remove toolbar
-
-" Standard JS
-let g:syntastic_javascript_checkers = ['standard']
-let g:syntastic_mode_map = { 'passive_filetypes': ['html'] }
-
-" ctrl-s to save
-noremap <C-S> :update<CR>
-vnoremap <C-S> <C-C>:update<CR>
-inoremap <C-S> <C-O>:update<CR>
 
 " Keybinds
 let mapleader=","
@@ -94,5 +53,3 @@ map <Leader>l <Plug>(easymotion-lineforward)
 map <Leader>j <Plug>(easymotion-j)
 map <Leader>k <Plug>(easymotion-k)
 map <Leader>h <Plug>(easymotion-linebackward)
-
-set showtabline=1
