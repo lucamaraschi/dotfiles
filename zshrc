@@ -36,7 +36,24 @@ fi
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/home/lm/apps:/home/lm/bin"
 
 # NVM
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+function load-nvm () {
+  if [[ $OSTYPE == "darwin"* ]]; then
+    export NVM_DIR=~/.nvm
+    [[ -s $(brew --prefix nvm)/nvm.sh ]] && source $(brew --prefix nvm)/nvm.sh
+  else
+    [[ -s "$HOME/.nvm/nvm.sh" ]] && source "$HOME/.nvm/nvm.sh"
+  fi
+}
+
+load-nvmrc() {
+  if [[ -f .nvmrc && -r .nvmrc ]]; then
+    if ! type nvm >/dev/null; then
+      load-nvm
+    fi
+    nvm use
+  fi
+}
+add-zsh-hook chpwd load-nvmrc
 
 # ssh
 if [ -f ~/.ssh/id_rsa ]; then

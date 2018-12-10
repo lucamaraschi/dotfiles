@@ -1,3 +1,5 @@
+#!/bin/sh
+
 echo -e "\n\nInstalling nodejs (from nvm)"
 
 # reload nvm into this environment

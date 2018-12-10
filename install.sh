@@ -26,21 +26,13 @@ if [ "$(uname)" == "Darwin" ]; then
 	source install/macos/vim.sh
 fi;
 
+# Installing ZSH environment
+clear
+source install/zsh.sh
+
 clear
 echo "Installing tpm, tmux plugin manager"
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-
-clear 
-echo "Installing Oh-my-zsh"
-sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-
-clear 
-echo "Installing ZSH theme"
-souce install/bullet-train-zsh-theme.sh
-
-clear 
-echo "Installing Spaceship prompt"
-souce install/spaceship-prompt.sh
 
 clear
 echo "Configuring zsh as default shell"
