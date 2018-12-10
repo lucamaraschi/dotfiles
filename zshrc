@@ -38,10 +38,6 @@ export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/home/lm/apps:/home/lm
 # NVM
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 
-# RVM
-# source ~/.rvm/scripts/rvm
-# export PATH="$PATH:$HOME/.rvm/bin"
-
 # ssh
 if [ -f ~/.ssh/id_rsa ]; then
 	ssh-add ~/.ssh/id_rsa

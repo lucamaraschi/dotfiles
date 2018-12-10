@@ -38,7 +38,6 @@ clear
 echo "Installing Spaceship prompt"
 souce install/spaceship-prompt.sh
 
-
 clear
 echo "Configuring zsh as default shell"
 chsh -s $(which zsh)
