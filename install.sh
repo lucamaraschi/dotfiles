@@ -31,6 +31,10 @@ echo "Installing tpm, tmux plugin manager"
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 clear 
+echo "Installing Oh-my-zsh"
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+clear 
 echo "Installing ZSH theme"
 souce install/bullet-train-zsh-theme.sh
 
