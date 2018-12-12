@@ -16,6 +16,7 @@ brew tap homebrew/cask-drivers
 cd ~/src/lm/dotfiles/install/macos
 brew bundle
 
+mkdir -p ~/.config
 mackup restore
 
 # Cd back to previous directory

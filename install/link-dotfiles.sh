@@ -7,7 +7,6 @@ cd $DIR
 
 for file in $FILES; do
 	if [ ! -L ~/.$file ]; then
-		echo 'Linking "~/.$file" with "$DIR/$file"'
 		ln -s $DIR/$file ~/.$file
 	fi
 done
