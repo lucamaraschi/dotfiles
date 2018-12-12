@@ -17,7 +17,7 @@ cd ~/src/lm/dotfiles/install/macos
 brew bundle
 
 mkdir -p ~/.config
-mackup restore -f
+#mackup restore -f
 
 # Cd back to previous directory
 cd ~/src/lm/dotfiles/
