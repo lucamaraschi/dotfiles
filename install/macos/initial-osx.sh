@@ -17,7 +17,8 @@ cd ~/src/lm/dotfiles/install/macos
 brew bundle
 
 mkdir -p ~/.config
-#mackup restore -f
+mackup restore -f
+ln -s ~/src/lm/secrets/settings/macos/root/Users/Shared/iStatMenus/istatmenus6.plist /Users/Shared/.iStatMenus/istatmenus6.plist
 
 # Cd back to previous directory
 cd ~/src/lm/dotfiles/
