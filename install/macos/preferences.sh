@@ -16,8 +16,6 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 # MAC_NAME=$(cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 32 | head -n 1)
 MAC_NAME="automated"
 
-echo 'COMPUTER NAME IS $MAC_NAME'
-
 sudo scutil --set ComputerName "$MAC_NAME"
 sudo scutil --set HostName "$MAC_NAME"
 sudo scutil --set LocalHostName "$MAC_NAME"
@@ -439,9 +437,6 @@ defaults write com.apple.terminal SecureKeyboardEntry -bool true
 
 # Disable the annoying line marks
 defaults write com.apple.Terminal ShowLineMarks -int 0
-
-# Install the Solarized Dark theme for iTerm
-open "${HOME}/iterm/themes/Dracula.itermcolors"
 
 # Don’t display the annoying prompt when quitting iTerm
 defaults write com.googlecode.iterm2 PromptOnQuit -bool false

@@ -5,6 +5,12 @@ if test ! $(which brew); then
 	ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
+# Ask for the administrator password upfront
+sudo -v
+
+# Keep-alive: update existing `sudo` time stamp until `.macos` has finished
+while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
+
 echo -e "\nInstalling homebrew bundle"
 
 # Install bundle https://github.com/Homebrew/homebrew-bundle
@@ -16,8 +22,12 @@ brew tap homebrew/cask-drivers
 cd ~/src/lm/dotfiles/install/macos
 brew bundle
 
+sudo xcodebuild -license accept
+
 mkdir -p ~/.config
 mackup restore -f
+
+mkdir -p /Users/Shared/.iStatMenus/
 ln -s ~/src/lm/secrets/settings/macos/root/Users/Shared/iStatMenus/istatmenus6.plist /Users/Shared/.iStatMenus/istatmenus6.plist
 
 # Cd back to previous directory
