@@ -22,7 +22,7 @@ Plug 'tpope/vim-fugitive'
 call plug#end()
 
 syntax on
-color dracula
+" color dracula
 let g:airline_theme='murmur' " vim-airline theme
 
 set guifont=Monaco\ 14
