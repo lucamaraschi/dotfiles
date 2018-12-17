@@ -1,7 +1,7 @@
 ###########################
 #  Configuration
 ###########################
-if [ "$TMUX" = "" ]; then tmux; fi
+if [ "$TMUX" = "" ]; then /usr/local/bin/tmux; fi
 
 username="lm"
 # if this ever breaks run "$ brew prefix <toolname>"
@@ -11,7 +11,7 @@ export PATH="$PATH:/Users/$USER/.config/base16-shell"
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 export PATH="/usr/local/opt/curl/bin:$PATH"
 
-# start zle
+# start zl/usr/local/bin/e
 zmodload zsh/zle
 
 # Path to ZSH
