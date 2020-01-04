@@ -21,10 +21,11 @@ if [ "$(uname)" == "Darwin" ]; then
 
 	echo 'NVM time...'
 	source install/macos/nvm.sh
-
-	echo 'Configuring VIM...'
-	source install/macos/vim.sh
 fi;
+
+clear
+echo 'Configuring VIM...'
+source install/macos/vim.sh
 
 # Installing ZSH environment
 clear

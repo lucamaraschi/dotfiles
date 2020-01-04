@@ -1,25 +1,26 @@
 set nocompatible
 
+set rtp+=~/.vim/bundle/Vundle.vim
 " vim-plug
-call plug#begin()
+call vundle#begin()
 
-Plug 'scrooloose/nerdtree'
-Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'scrooloose/syntastic'
-Plug 'altercation/vim-colors-solarized'
-Plug 'kien/ctrlp.vim'
-Plug 'pangloss/vim-javascript'
-Plug 'easymotion/vim-easymotion'
-Plug 'tpope/vim-commentary'
-Plug 'editorconfig/editorconfig-vim'
-Plug 'jeffkreeftmeijer/vim-numbertoggle'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'christoomey/vim-tmux-navigator'
-Plug 'sheerun/vim-polyglot'
-Plug 'dracula/vim'
-Plug 'tpope/vim-fugitive'
-call plug#end()
+Plugin 'scrooloose/nerdtree'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
+Plugin 'scrooloose/syntastic'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'kien/ctrlp.vim'
+Plugin 'pangloss/vim-javascript'
+Plugin 'easymotion/vim-easymotion'
+Plugin 'tpope/vim-commentary'
+Plugin 'editorconfig/editorconfig-vim'
+Plugin 'jeffkreeftmeijer/vim-numbertoggle'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'sheerun/vim-polyglot'
+Plugin 'dracula/vim'
+Plugin 'tpope/vim-fugitive'
+call vundle#end()
 
 syntax on
 "color dracula

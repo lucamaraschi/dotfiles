@@ -18,7 +18,7 @@ zmodload zsh/zle
 export ZSH=$HOME/.oh-my-zsh
 
 # ZSH Theme
-ZSH_THEME="bullet-train"
+ZSH_THEME="spaceship"
 
 # ZSH Config
 plugins=(git git-extras)
@@ -36,8 +36,8 @@ fi
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/home/lm/apps:/home/lm/bin"
 
 # NVM
-export NVM_DIR=~/.nvm
-[[ -s $(brew --prefix nvm)/nvm.sh ]] && source $(brew --prefix nvm)/nvm.sh
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
 # ssh
 if [ -f ~/.ssh/id_rsa ]; then
@@ -48,3 +48,10 @@ export ANDROID_HOME=$HOME/Library/Android/sdk
 export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 export PATH="$HOME/.fastlane/bin:$PATH"
+
+# tabtab source for serverless package
+# uninstall by removing these lines or running `tabtab uninstall serverless`
+[[ -f /Users/lucamaraschi/.nvm/versions/node/v11.4.0/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh ]] && . /Users/lucamaraschi/.nvm/versions/node/v11.4.0/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh
+# tabtab source for sls package
+# uninstall by removing these lines or running `tabtab uninstall sls`
+[[ -f /Users/lucamaraschi/.nvm/versions/node/v11.4.0/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh ]] && . /Users/lucamaraschi/.nvm/versions/node/v11.4.0/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh
