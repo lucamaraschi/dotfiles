@@ -23,7 +23,6 @@ brew 'mackup'
 
 # Casks
 cask_args appdir: '/Applications'
-tap 'homebrew/cask-cask'
 cask 'qlcolorcode'
 cask 'qlmarkdown'
 cask 'quicklook-json'
