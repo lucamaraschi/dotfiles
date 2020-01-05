@@ -15,7 +15,7 @@ echo -e "\nInstalling homebrew bundle"
 
 # Install bundle https://github.com/Homebrew/homebrew-bundle
 brew tap Homebrew/bundle
-brew tap caskroom/fonts
+brew tap homebrew/fonts
 brew tap homebrew/cask-drivers
 
 # Go to location of Brewfile and run brew bundle
