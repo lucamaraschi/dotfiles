@@ -25,7 +25,7 @@ fi;
 
 clear
 echo 'Configuring VIM...'
-source install/macos/vim.sh
+source install/vim.sh
 
 # Installing ZSH environment
 clear
