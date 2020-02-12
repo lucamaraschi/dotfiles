@@ -7,3 +7,4 @@ vim/plugged
 bundle
 vim/bundle
 zsh/bundle
+Brewfile.lock.json

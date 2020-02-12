@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 DIR=~/src/lm/dotfiles                            # dotfiles directory
-FILES="vimrc vim tmux.conf.local gitconfig aliases mackup.cfg mackup" # list of files/folders to symlink in homedir
+FILES="vimrc tmux.conf.local gitconfig aliases mackup.cfg mackup" # list of files/folders to symlink in homedir
 
 cd $DIR
 
