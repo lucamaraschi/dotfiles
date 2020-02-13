@@ -47,6 +47,7 @@ cask 'docker'
 cask 'adobe-creative-cloud'
 cask 'miro-formerly-realtimeboard'
 cask 'figma'
+cask 'phoenix'
 
 # Drivers
 # cask 'logitech-gaming-software'
