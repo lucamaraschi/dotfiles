@@ -20,6 +20,7 @@ brew 'htop-osx'
 brew 'cmake'
 brew 'ccache'
 brew 'mackup'
+brew 'google-cloud-sdk'
 
 # Casks
 cask_args appdir: '/Applications'
@@ -27,6 +28,7 @@ cask 'qlcolorcode'
 cask 'qlmarkdown'
 cask 'quicklook-json'
 cask 'google-chrome'
+cask 'brave-browser'
 cask 'spotify'
 cask 'alfred'
 cask 'hammerspoon'
@@ -44,6 +46,7 @@ cask 'android-studio'
 cask 'docker'
 cask 'adobe-creative-cloud'
 cask 'miro-formerly-realtimeboard'
+cask 'figma'
 
 # Drivers
 # cask 'logitech-gaming-software'
@@ -62,6 +65,6 @@ mas 'Slack', id: 803453959
 mas 'Fantastical 2', id: 975937182
 mas '1Password', id: 1333542190
 mas 'Pixelmator Pro', id: 1289583905
-mas 'Trello', id: 1278508951
+# mas 'Trello', id: 1278508951
 # mas 'PDF Expert Pro', id: 1055273043
 # mas 'PDF Reader Pro', id: 825459243
