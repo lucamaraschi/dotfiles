@@ -20,10 +20,10 @@ brew 'htop-osx'
 brew 'cmake'
 brew 'ccache'
 brew 'mackup'
-brew 'google-cloud-sdk'
 
 # Casks
 cask_args appdir: '/Applications'
+cask 'google-cloud-sdk'
 cask 'qlcolorcode'
 cask 'qlmarkdown'
 cask 'quicklook-json'
