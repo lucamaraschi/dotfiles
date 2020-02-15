@@ -18,7 +18,7 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'sheerun/vim-polyglot'
-Plugin 'dracula/vim'
+Plugin 'dracula/vim', { 'name': 'dracula' }
 Plugin 'tpope/vim-fugitive'
 call vundle#end()
 
