@@ -49,6 +49,7 @@ cask 'miro-formerly-realtimeboard'
 cask 'figma'
 cask 'phoenix'
 cask 'dozer'
+cask 'google-cloud-sdk'
 
 # Drivers
 # cask 'logitech-gaming-software'
