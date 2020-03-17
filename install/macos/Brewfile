@@ -20,6 +20,8 @@ brew 'htop-osx'
 brew 'cmake'
 brew 'ccache'
 brew 'mackup'
+brew 'carthage'
+brew 'fastlane'
 
 # Casks
 cask_args appdir: '/Applications'
