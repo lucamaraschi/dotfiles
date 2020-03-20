@@ -14,7 +14,9 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 # Set computer name (as done via System Preferences → Sharing
 # MAC_NAME=$(cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 32 | head -n 1)
-MAC_NAME="automated"
+#MAC_NAME="automated"
+
+read -p 'Machine name is: ' MAC_NAME
 
 sudo scutil --set ComputerName "$MAC_NAME"
 sudo scutil --set HostName "$MAC_NAME"
