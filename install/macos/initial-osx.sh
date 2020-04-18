@@ -22,7 +22,7 @@ brew tap homebrew/cask-drivers
 cd ~/src/lm/dotfiles/install/macos
 brew bundle
 
-sudo xcodebuild -license accept
+sudo xcode-select --switch /Library/Developer/CommandLineTools
 
 mkdir -p ~/.config
 mackup restore -f
