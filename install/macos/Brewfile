@@ -20,7 +20,6 @@ brew 'htop-osx'
 brew 'cmake'
 brew 'ccache'
 brew 'mackup'
-brew 'carthage'
 brew 'fastlane'
 
 # Casks
@@ -30,7 +29,6 @@ cask 'qlcolorcode'
 cask 'qlmarkdown'
 cask 'quicklook-json'
 cask 'google-chrome'
-cask 'brave-browser'
 cask 'spotify'
 cask 'alfred'
 cask 'hammerspoon'
@@ -39,7 +37,6 @@ cask 'android-ndk'
 cask 'istat-menus'
 cask 'iterm2'
 cask 'vlc'
-cask 'bartender'
 cask 'karabiner-elements'
 cask 'visual-studio-code'
 cask 'skyfonts'
@@ -53,6 +50,8 @@ cask 'phoenix'
 cask 'dozer'
 cask 'multipass'
 cask 'zoomus'
+cask 'keybase'
+cask 'firefox'
 
 # Drivers
 # cask 'logitech-gaming-software'
@@ -72,7 +71,6 @@ mas 'Fantastical 2', id: 975937182
 mas '1Password', id: 1333542190
 mas 'Pixelmator Pro', id: 1289583905
 mas 'Amphetamine', id: 937984704
-mas 'Bear', id: 1091189122
 mas 'Spark', id: 1176895641
 
 # mas 'Trello', id: 1278508951
