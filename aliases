@@ -21,7 +21,7 @@ alias .....="cd ../../../.."
 alias la='ls -al'
 
 # disable tty when in vim
-alias vim="stty stop '' -ixoff ; vim"
+alias vim="stty stop '' -ixoff ; mvim -v"
 
 
 # Git aliases
