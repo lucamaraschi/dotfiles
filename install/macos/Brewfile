@@ -21,6 +21,7 @@ brew 'cmake'
 brew 'ccache'
 brew 'mackup'
 brew 'fastlane'
+brew 'fpp'
 
 # Casks
 cask_args appdir: '/Applications'

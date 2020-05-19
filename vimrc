@@ -35,7 +35,7 @@ let g:airline_theme='murmur' " vim-airline theme
 
 " Fonts 
 set encoding=utf8
-set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types:h14
+set guifont=Droid\ Sans\ Mono\ Nerd\ Font\ Complete:h14
 
 " Syntastic
 set statusline+=%#warningmsg#
@@ -49,8 +49,8 @@ let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_min_num_of_chars_for_completion = 3
 
 set laststatus=2
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
 set encoding=utf-8
 set smarttab
 set number
@@ -69,7 +69,7 @@ match ErrorMsg '^\(<\|=\|>\)\{7\}\([^=].\+\)\?$'
 
 let g:airline_powerline_fonts = 1
 " Keybinds
-let mapleader=","
+let mapleader=" "
 let g:NumberToggleTrigger="<C-n>"
 nnoremap <leader>d :NERDTreeToggle<CR>
 nnoremap <leader>t :CtrlP<CR>
