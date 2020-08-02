@@ -22,6 +22,7 @@ brew 'ccache'
 brew 'mackup'
 brew 'fastlane'
 brew 'fpp'
+brew 'switchaudio-osx'
 
 # Casks
 cask_args appdir: '/Applications'
