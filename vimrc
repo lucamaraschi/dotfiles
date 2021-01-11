@@ -49,8 +49,8 @@ let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_min_num_of_chars_for_completion = 3
 
 set laststatus=2
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
 set encoding=utf-8
 set smarttab
 set number

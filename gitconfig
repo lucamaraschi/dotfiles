@@ -1,19 +1,5 @@
-[user]
-	name = Luca Maraschi
-	email = luca.maraschi@gmail.com
-[push]
-    default = current
-[alias]
-    co = checkout
-    br = branch
-    st = status
-    ci = commit
-    pu = push
-[core]
-	excludesfile = /Users/lucamaraschi/.gitignore_global
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
-[mergetool "sourcetree"]
-	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
+[includeIf "gitdir:~/src/**/gitlab/"]
+    path = ~/.gitconfig.gitlab
+
+[includeIf "gitdir:~/src/**/gh/"]
+    path = ~/.gitconfig.github

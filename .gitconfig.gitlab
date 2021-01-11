@@ -1,0 +1,15 @@
+[user]
+	name = Luca Maraschi
+	email = luca@cto.ai
+[push]
+    default = current
+[alias]
+    co = checkout
+    br = branch
+    st = status
+    ci = commit
+    pu = push
+[core]
+	excludesfile = /Users/lucamaraschi/.gitignore_global
+[pull]
+	rebase = false
